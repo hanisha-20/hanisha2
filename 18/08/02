@@ -1,0 +1,23 @@
+#include <stdio.h>
+int main() {
+    int a[]={1,2,3,4,5};
+    int len;
+    len=sizeof(a)/sizeof(int);
+    int i,f;
+    int sum=0;
+    int n;
+    for(i=0;i<len;i++)
+    {
+        n=a[i];
+        f=1;
+        while(n>0)
+        {
+            f=f*n;
+            n--;
+        }
+        sum=sum+f;
+    }
+    printf("%d",sum);
+    
+    return 0;
+}
