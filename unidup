@@ -1,0 +1,25 @@
+#include <stdio.h>
+int main() {
+    int n,num;
+    int flag=0;
+    printf("enter number of values you want to insert");
+    scanf("%d",&n);
+    printf("enter numbers\n");
+    scanf("%d",&num);
+    int i=num;
+    while(n>1)
+    {
+        printf("enter numbers\n");
+        scanf("%d",&num);
+        if(i==num)
+        {
+            flag=1;
+        }
+        n--;
+    }
+    if(flag==0)
+    printf("UNIQUE");
+    else
+    printf("DUPLICATE");
+    return 0;
+}
