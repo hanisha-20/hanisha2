@@ -1,0 +1,20 @@
+#include <stdio.h>
+#include<string.h>
+int main() {
+    int num;
+    scanf("%d",&num);
+    towers(num,'A','B','C');
+    return 0;
+}
+void towers(int num,char source,char target,char temp)
+{
+    if(num==1)
+    {
+        printf("moving ring 1 from %c to %c\n",source,target);
+        return;
+    }
+    //recursively calling function twice
+    towers(num-1,source,temp,target);
+    printf("moving ring %d from %c to %c\n",num,source,target);
+    towers(num-1,temp,target,source);
+}
